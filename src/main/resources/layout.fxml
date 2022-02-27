@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import view.ResizableCanvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/"
+	fx:controller="controller.Controller">
+	<top>
+		<MenuBar fx:id="menuBar" focusTraversable="true">
+			<menus>
+				<Menu text="Action">
+					<items>
+						<MenuItem text="Create One Array"
+							onAction="#createOneArray" />
+						<MenuItem text="Create Two Arrays"
+							onAction="#createTwoArrays" />
+						<MenuItem fx:id="reshape" text="Reshape"
+							onAction="#reshape" />
+						<MenuItem fx:id="slice" text="Slice" onAction="#slice" />
+						<MenuItem fx:id="iterate" text="Iterate"
+							onAction="#iterate" />
+					</items>
+				</Menu>
+				<Menu text="Help">				
+                    <items>
+                        <MenuItem text="Help Contents"
+                            onAction="#help" />
+                        <MenuItem text="About"
+                            onAction="#about" />
+                    </items>
+                </Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<StackPane fx:id="pane">
+			<ResizableCanvas fx:id="canvas" />
+		</StackPane>
+	</center>
+</BorderPane>
+
